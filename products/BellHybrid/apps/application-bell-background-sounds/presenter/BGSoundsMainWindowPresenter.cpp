@@ -9,9 +9,7 @@ namespace app::bgSounds
 {
     BGSoundsMainWindowPresenter::BGSoundsMainWindowPresenter(std::shared_ptr<AbstractSoundsRepository> soundsRepository)
         : soundsRepository{std::move(soundsRepository)}
-    {
-        this->soundsRepository->scanMusicFilesList();
-    }
+    {}
     void BGSoundsMainWindowPresenter::loadAudioRecords()
     {
         getView()->setSoundsList(soundsRepository->getMusicFilesList());
